@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Weather App 2.0</title>
+    <!-- Google Fonts: Futuristic & Clean -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 (free icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <div class="search-section">
+            <div class="search-wrapper">
+                <div class="search">
+                    <input type="text" id="cityInput" placeholder="ENTER COORDINATES OR CITY..." spellcheck="false">
+                    <button id="searchBtn" aria-label="Search"><i class="fas fa-search"></i></button>
+                </div>
+                <button id="locationBtn" class="location-btn" aria-label="Current location"><i class="fas fa-location-dot"></i></button>
+            </div>
+        </div>
+
+        <div class="weather" id="weatherContainer">
+            <div class="weather-icon-container">
+                <i id="weatherMainIcon" class="fas fa-cloud-sun weather-main-icon"></i>
+            </div>
+            <h1 class="temp" id="tempValue">--°C</h1>
+            <h2 class="city" id="cityName">NOVA CITY</h2>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-tint"></i>
+                    <div class="stat-info">
+                        <p id="humidityValue">--%</p>
+                        <p>HUMIDITY</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-wind"></i>
+                    <div class="stat-info">
+                        <p id="windValue">-- km/h</p>
+                        <p>WIND SPEED</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-thermometer-half"></i>
+                    <div class="stat-info">
+                        <p id="feelsLikeValue">--°C</p>
+                        <p>FEELS LIKE</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="extra-metrics">
+                <span><i class="fas fa-compress-alt"></i> <span id="pressureValue">-- hPa</span></span>
+                <span><i class="fas fa-sun"></i> UV <span id="uvDummy">--</span></span>
+                <span><i class="fas fa-cloud-moon"></i> CLOUDS <span id="cloudsValue">--%</span></span>
+            </div>
+        </div>
+        <div id="messageArea"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
